@@ -2,13 +2,13 @@
 //Processa as bases de dados .xml e .csv
 
 //carrega xml
-$xml = simplexml_load_file('xml.xml');
+$xml = simplexml_load_file('bases/xml.xml');
 
 //carrega csv
 $csv = csv_to_array();
 
 
-function csv_to_array($filename='csv.csv', $delimiter=';')
+function csv_to_array($filename='bases/csv.csv', $delimiter=';')
 	{
 	    if(!file_exists($filename) || !is_readable($filename))
 	        return FALSE;
