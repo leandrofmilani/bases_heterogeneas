@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<livraria>
+<livro>
+<titulo>Sistemas de Banco de Dados</titulo>
+<autor>Silberschatz</autor>
+<ano>2005</ano>
+<preco>80.00</preco>
+</livro>
+<livro>
+<titulo>XQuery Kick Start</titulo>
+<autor>James McGovern</autor>
+<autor>Per Bothner</autor>
+<autor>Kurt Cagle</autor>
+<autor>James Linn</autor>
+<autor>Vaidyanathan Nagarajan</autor>
+<ano>2003</ano>
+<preco>49.99</preco>
+</livro>
+</livraria>
