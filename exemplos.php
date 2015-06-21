@@ -32,38 +32,32 @@ require_once("conectaPostGreSQL.php");
 
 
 $sqlSelecionar = "SELECT * FROM `livro`;";
-	$consulta = mysql_query($sqlSelecionar,$conexaoMSQL);
+	$consultaLivros = mysql_query($sqlSelecionar,$conexaoMSQL);
 	//$livros = mysql_fetch_array($consulta);
 	$cont=0;
-	while($linha = mysql_fetch_array($consulta)){
+	while($linha = mysql_fetch_array($consultaLivros)){
 		$nomeLivro[$cont] = $linha["titulo"];
 		echo "<h4>".$nomeLivro[$cont]."</h4>";
 		$cont++;
 	}
 
 
-
-
-/* Cria a conexão
-Substitua pelo seu próprio nome de usuário e senha */
-$conexao = pg_connect("host=localhost dbname=banco_g2 user=root password=postgres") or die ("Não foi possível conectar ao Banco de dados.");
-
 // Cria a declaração SQL
 $sql = "SELECT * FROM livro";
 
 // Executa a consulta SQL e traz os resultados
-$resultado = pg_exec($conexao, $sql) or die ("Não foi possível executar a consulta");
+$resultado = pg_exec($conexaoPSQL, $sql) or die ("Não foi possível executar a consulta");
 
 $cont2=0;
 // Formata os resultados por linha 
 while ($linha = pg_fetch_array($resultado)) {
-$tituloLivro = $linha["titulo"];
-echo "<h4>".$tituloLivro[$cont2]."</h4>";
+$tituloLivro[$cont] = $linha["titulo"];
+echo "<h4>".$tituloLivro[$cont]."</h4>";
 $cont2++;
 }
 
 // Libera recursos e fecha conexão pg_freeresult($resultado);
-pg_close($conexao);
+pg_close($conexaoPSQL);
 
 
 
