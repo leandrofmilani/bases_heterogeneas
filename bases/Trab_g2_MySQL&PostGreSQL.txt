@@ -1,0 +1,17 @@
+CREATE TABLE livro (isbn numeric(16) primary key, titulo varchar(30), assunto varchar(20), numpag numeric(4), ano numeric(4), preco numeric(6,2));
+
+INSERT INTO `banco_g2`.`livro` (`isbn`, `titulo`, `assunto`, `numpag`, `ano`, `preco`) VALUES ('11111', 'Jardinagem', 'Fauna e Flora', '372', '2013', '45');
+INSERT INTO `banco_g2`.`livro` (`isbn`, `titulo`, `assunto`, `numpag`, `ano`, `preco`) VALUES ('22222', 'Tudo sobre Java', 'Programação', '442', '1997', '76');
+
+
+
+
+
+///abaixo postgresql
+
+CREATE TABLE livro (isbn numeric(16) primary key, titulo varchar(30), assunto varchar(20), numpag numeric(4), ano numeric(4), preco numeric(6,2));
+
+
+
+INSERT INTO "livro" VALUES ('11111', 'Jardinagem', 'Fauna e Flora', '372', '2013', '45');
+INSERT INTO "livro" VALUES ('22222', 'Tudo sobre Java', 'Programação', '442', '1997', '76');
