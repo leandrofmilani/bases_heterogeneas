@@ -2,9 +2,6 @@
 
 	//Carrega as bases de dados .xml e .csv
 	require_once("carrega_bases.php");
-    //Conecta base de dados PostGreSQL e MySQL
-    require_once("conectaMySQL.php");
-    require_once("conectaPostGreSQL.php");
 
     
     echo "<h1><center>XML, CSV, PostGreSQL & MySQL </center></h1>";	
